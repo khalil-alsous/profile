@@ -43,7 +43,6 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    position: relative;
     &::after {
       content: "";
       position: absolute;
@@ -80,7 +79,7 @@ export default {
         background-color: #f8f9fa;
         border-radius: 5px;
         color: #333;
-        padding: 8px 0;
+        padding: 10px 0;
         text-decoration: none;
         transition: 0.3s;
         width: 100%;

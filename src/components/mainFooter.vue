@@ -1,92 +1,67 @@
 <template>
-  <footer class="text-center text-white">
+  <footer>
     <!-- Grid container -->
-    <div class="container p-4 pb-0">
+    <div class="container">
       <!-- Section: Social media -->
-      <section class="mb-4">
+      <section>
         <!-- Facebook -->
         <a
-          class="btn btn-primary btn-floating m-1"
+          class="btn"
           style="background-color: #3b5998"
           href="#!"
           role="button"
         >
-          <!-- <vue-fontawesome
-            icon="facebook"
-            size="1"
-            color="#fff"
-          ></vue-fontawesome> -->
+          <font-awesome-icon class="icon" :icon="['fab', 'facebook']" />
         </a>
-<font-awesome-icon :icon="['fab', 'twitter']" />
-<!-- <font-awesome-icon :icon="['fas', 'flag']" /> -->
 
         <!-- Twitter -->
         <a
-          class="btn btn-primary btn-floating m-1"
+          class="btn"
           style="background-color: #55acee"
           href="#!"
           role="button"
         >
-          <!-- <vue-fontawesome
-            icon="twitter"
-            size="1"
-            color="#fff"
-          ></vue-fontawesome> -->
+          <font-awesome-icon class="icon" :icon="['fab', 'twitter']" />
         </a>
 
         <!-- Google -->
         <a
-          class="btn btn-primary btn-floating m-1"
+          class="btn"
           style="background-color: #dd4b39"
           href="#!"
           role="button"
         >
-          <!-- <vue-fontawesome
-            icon="google"
-            size="1"
-            color="#fff"
-          ></vue-fontawesome> -->
+          <font-awesome-icon class="icon" :icon="['fab', 'google']" />
         </a>
 
         <!-- Instagram -->
         <a
-          class="btn btn-primary btn-floating m-1"
+          class="btn"
           style="background-color: #ac2bac"
           href="#!"
           role="button"
         >
-          <!-- <vue-fontawesome
-            icon="instagram"
-            size="1"
-            color="#fff"
-          ></vue-fontawesome> -->
+          <font-awesome-icon class="icon" :icon="['fab', 'instagram']" />
         </a>
 
         <!-- Linkedin -->
         <a
-          class="btn btn-primary btn-floating m-1"
+          class="btn"
           style="background-color: #0082ca"
           href="#!"
           role="button"
         >
-          <!-- <vue-fontawesome
-            icon="linkedin"
-            size="1"
-            color="#fff"
-          ></vue-fontawesome> -->
+          <font-awesome-icon class="icon" :icon="['fab', 'linkedin']" />
         </a>
+
         <!-- Github -->
         <a
-          class="btn btn-primary btn-floating m-1"
+          class="btn"
           style="background-color: #333333"
           href="#!"
           role="button"
         >
-          <!-- <vue-fontawesome
-            icon="github"
-            size="1"
-            color="#fff"
-          ></vue-fontawesome> -->
+          <font-awesome-icon class="icon" :icon="['fab', 'github']" />
         </a>
       </section>
       <!-- Section: Social media -->
@@ -94,7 +69,7 @@
     <!-- Grid container -->
 
     <!-- Copyright -->
-    <div class="text-center p-3 copyright">© 2020 Copyright: Khalil Alsous</div>
+    <div class="copyright">© 2020 Copyright: Khalil Alsous</div>
     <!-- Copyright -->
   </footer>
 </template>
@@ -106,10 +81,24 @@ footer {
   border-bottom-right-radius: 5px;
   background-color: #eee;
   .container {
+    padding: 1.5rem !important;
     section {
+      .icon {
+        color: #fff;
+      }
       .btn {
         border: none;
         transition: 0.2s;
+        margin: 0.25rem !important;
+        display: inline-block;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: center;
+        text-decoration: none;
+        vertical-align: middle;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        border-radius: 0.25rem;
         &:hover {
           opacity: 0.6;
         }
@@ -120,6 +109,8 @@ footer {
     background-color: #999;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    padding: 1rem !important;
+    color: #fff;
   }
 }
 </style>

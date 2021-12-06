@@ -203,6 +203,8 @@ export default {
             font-weight: bold;
             padding: 2px 0px;
             letter-spacing: 0.5px;
+            min-width: 125px;
+            padding-bottom: 5px;
           }
           td:first-of-type {
             color: #444;

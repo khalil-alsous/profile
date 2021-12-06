@@ -30,6 +30,8 @@ export default {
     text-align: center;
     color: #333;
     font-weight: bold;
+    font-size: calc(1.275rem + .3vw);
+    margin-bottom: 20px;
   }
   .skill-progress {
     height: 150px;

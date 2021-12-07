@@ -98,6 +98,7 @@ export default {
     border-top-right-radius: 5px;
     min-height: 100vh;
     background-image: url("../assets/b8.jpg");
+    background-attachment: fixed;
     background-size: cover;
     padding: 20px;
     display: flex;

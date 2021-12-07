@@ -155,6 +155,11 @@ export default {
       border-top-left-radius: 5px;
       opacity: 0.8;
       box-shadow: rgba(0, 0, 0, 0.4) 1.95px 0px 2.6px;
+      @media (max-width: 767px) {
+        & {
+          background-attachment: fixed;
+        }
+      }
     }
     .info {
       flex-basis: 50%;

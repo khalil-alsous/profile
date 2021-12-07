@@ -25,14 +25,7 @@
         <div class="note">my progress</div>
         <div class="heading">Progress in projects</div>
         <div class="progress">
-          <div
-            class="progress-bar progress-bar-striped progress-bar-animated"
-            role="progressbar"
-            style="width: 15%"
-            aria-valuenow="15"
-            aria-valuemin="0"
-            aria-valuemax="100"
-          >
+          <div class="progress-bar" role="progressbar" style="width: 15%">
             js
           </div>
           <div
@@ -76,7 +69,7 @@
       <div class="cards">
         <div class="card">
           <span>
-            <vue-fontawesome icon="tasks" size="3"></vue-fontawesome>
+            <font-awesome-icon class="icon" :icon="['fas', 'tasks']" />
           </span>
           <h1>
             <div class="counter" data-goal="144">0</div>
@@ -85,7 +78,7 @@
         </div>
         <div class="card">
           <span>
-            <vue-fontawesome icon="code" size="3"></vue-fontawesome>
+            <font-awesome-icon class="icon" :icon="['fas', 'code']" />
           </span>
           <h1>
             <div class="counter" data-goal="130">0</div>
@@ -94,7 +87,7 @@
         </div>
         <div class="card">
           <span>
-            <vue-fontawesome icon="users" size="3"></vue-fontawesome>
+            <font-awesome-icon class="icon" :icon="['fas', 'users']" />
           </span>
           <h1>
             <div class="counter" data-goal="107">0</div>
@@ -103,11 +96,12 @@
         </div>
         <div class="card">
           <span>
-            <vue-fontawesome
+            <!-- <vue-fontawesome
               icon="calendar"
               size="3"
               class="icon"
-            ></vue-fontawesome>
+            ></vue-fontawesome> -->
+            <font-awesome-icon class="icon" :icon="['fas', 'calendar-alt']" />
           </span>
           <h1>
             <div class="counter" data-goal="120">0</div>
@@ -197,18 +191,39 @@ export default {
       }
       .progress {
         margin: 1rem 0;
+        display: flex;
+        background-color: #e9ecef;
+        border-radius: 5px;
+        .progress-bar:nth-of-type(1) {
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+          background-color: #3184fd;
+        }
+        .progress-bar:nth-of-type(2) {
+          background-color: #319466;
+        }
+
         .progress-bar:nth-of-type(3) {
           background-color: #888;
+        }
+        .progress-bar {
+          text-align: center;
+          color: #fff;
+          font-size: 13px;
+          padding: 2px 0;
         }
       }
       .btn {
         margin-top: 30px;
         background-color: #477b88;
         color: #fff;
-        padding: 7px 25px;
+        padding: 10px 25px;
         transition: 0.2s;
         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
         &:hover {
           opacity: 0.8;
         }
@@ -241,14 +256,18 @@ export default {
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         color: #fff;
         transition: 0.2s;
+        border-radius: 5px;
         h1 {
           margin: 20px 0;
+          transition: 0.2s;
         }
         p {
           color: #cbcbcb;
+          transition: 0.2s;
         }
         .icon {
           transition: 0.2s;
+          font-size: 40px;
         }
         &:hover {
           background-color: #35657452;

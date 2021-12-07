@@ -12,6 +12,7 @@ import "./scss/main.scss";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
+// brand icon
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
@@ -25,6 +26,15 @@ library.add(faInstagram);
 library.add(faLinkedin);
 library.add(faGithub);
 
+// solid icon
+import { faTasks } from "@fortawesome/free-solid-svg-icons";
+import { faCode } from "@fortawesome/free-solid-svg-icons";
+import { faUsers } from "@fortawesome/free-solid-svg-icons";
+import { faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
+library.add(faTasks);
+library.add(faCode);
+library.add(faUsers);
+library.add(faCalendarAlt);
 
 createApp(App)
   .use(store)

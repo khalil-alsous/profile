@@ -16,8 +16,8 @@
       <div class="heading">
         <h2>Some Of My Work</h2>
       </div>
-      <!-- <carousel>
-        <slide class="slide">
+      <div class="projects-cont">
+        <div class="slide">
           <img src="../assets/p1.jpg" alt="" />
           <div class="details">
             <h3>Project One</h3>
@@ -26,8 +26,8 @@
               <a href="#">For More</a>
             </span>
           </div>
-        </slide>
-        <slide class="slide">
+        </div>
+        <div class="slide">
           <img src="../assets/p4.jpg" alt="" />
           <div class="details">
             <h3>Project One</h3>
@@ -36,8 +36,8 @@
               <a href="#">For More</a>
             </span>
           </div>
-        </slide>
-        <slide class="slide">
+        </div>
+        <div class="slide">
           <img src="../assets/p6.jpg" alt="" />
           <div class="details">
             <h3>Project One</h3>
@@ -46,8 +46,8 @@
               <a href="#">For More</a>
             </span>
           </div>
-        </slide>
-        <slide class="slide">
+        </div>
+        <div class="slide">
           <img src="../assets/p3.jpg" alt="" />
           <div class="details">
             <h3>Project One</h3>
@@ -56,18 +56,8 @@
               <a href="#">For More</a>
             </span>
           </div>
-        </slide>
-        <slide class="slide">
-          <img src="../assets/p7.jpg" alt="" />
-          <div class="details">
-            <h3>Project One</h3>
-            <span>
-              <p>joi bark</p>
-              <a href="#">For More</a>
-            </span>
-          </div>
-        </slide>
-        <slide class="slide">
+        </div>
+        <div class="slide">
           <img src="../assets/p5.jpg" alt="" />
           <div class="details">
             <h3>Project One</h3>
@@ -76,8 +66,8 @@
               <a href="#">For More</a>
             </span>
           </div>
-        </slide>
-        <slide class="slide">
+        </div>
+        <div class="slide">
           <img src="../assets/p2.jpg" alt="" />
           <div class="details">
             <h3>Project One</h3>
@@ -86,36 +76,18 @@
               <a href="#">For More</a>
             </span>
           </div>
-        </slide>
-      </carousel> -->
-        <Carousel :itemsToShow="3.95" :wrapAround="true">
-    <Slide v-for="slide in 10" :key="slide">
-      <div class="carousel__item">{{ slide }}</div>
-    </Slide>
-
-    ...
-  </Carousel>
-
+        </div>
+      </div>
     </section>
-
     <!-- footer section -->
     <mainFooter></mainFooter>
   </div>
 </template>
 <script>
 import mainFooter from "../components/mainFooter.vue";
-// import { defineComponent } from 'vue'
-import { Carousel, Slide } from 'vue3-carousel';
-
-import 'vue3-carousel/dist/carousel.css';
-
 export default {
   components: {
     mainFooter,
-    Carousel,
-    Slide,
-    // Pagination,
-
   },
 };
 </script>
@@ -182,96 +154,84 @@ export default {
         }
       }
     }
-    .slide {
-      position: relative;
-      flex-basis: 40%;
-      justify-content: space-between;
-      margin: 0 12px;
-      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-      border-radius: 5px;
-      overflow: hidden;
-      img {
-        max-width: 100%;
+    .projects-cont {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      padding: 0 10px;
+      gap: 35px;
+      .slide {
+        position: relative;
+        flex-basis: 40%;
+        justify-content: space-between;
+        // margin: 0 12px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         border-radius: 5px;
-        transition: 0.5s;
-      }
-      .details {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background-color: #31de79;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
-        padding: 15px 20px;
-        opacity: 0;
-        transition: 0.5s;
-        h3 {
-          font-size: 20px;
-          color: #fff;
-          text-align: left;
+        overflow: hidden;
+        img {
+          max-width: 100%;
+          border-radius: 5px;
+          transition: 0.5s;
+          margin-bottom: -4px;
         }
-        span {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          font-size: 14px;
-          p {
-            margin-bottom: 0;
-            color: rgba(255, 255, 255, 0.8);
-            text-transform: uppercase;
+        .details {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          background-color: #31de79;
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px;
+          padding: 15px 20px;
+          opacity: 0;
+          transition: 0.5s;
+          h3 {
+            font-size: 18px;
+            color: #fff;
+            text-align: left;
+            font-weight: 500;
+            margin-bottom: 5px;
           }
-          a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            &:hover {
-              color: #fff;
-              text-decoration: underline;
+          span {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            p {
+              margin-bottom: 0;
+              color: rgba(255, 255, 255, 0.8);
+              text-transform: uppercase;
+            }
+            a {
+              color: rgba(255, 255, 255, 0.8);
+              text-decoration: none;
+              &:hover {
+                color: #fff;
+                text-decoration: underline;
+              }
             }
           }
         }
-      }
-      &:hover {
-        img {
-          transform: scale(1.2);
-          filter: blur(0.7px);
+        &:hover {
+          img {
+            transform: scale(1.2);
+            filter: blur(0.7px);
+          }
+          .details {
+            opacity: 1;
+          }
         }
-        .details {
-          opacity: 1;
-        }
-      }
-      @media (max-width: 767px) {
-        & {
-          flex-basis: 80%;
-        }
-        &:nth-of-type(5),
-        &:nth-of-type(6),
-        &:nth-of-type(7) {
-          display: none;
+        @media (max-width: 767px) {
+          & {
+            flex-basis: 80%;
+          }
+          &:nth-of-type(5),
+          &:nth-of-type(6),
+          &:nth-of-type(7) {
+            display: none;
+          }
         }
       }
     }
   }
 }
-.carousel__slide > .carousel__item {
-  transform: scale(1);
-  opacity: 0.5;
-  transition: 0.5s;
-}
-.carousel__slide--visible > .carousel__item {
-  opacity: 1;
-  transform: rotateY(0);
-}
-.carousel__slide--next > .carousel__item {
-  transform: scale(0.9) translate(-10px);
-}
-.carousel__slide--prev > .carousel__item {
-  transform: scale(0.9) translate(10px);
-}
-.carousel__slide--active > .carousel__item {
-  transform: scale(1.1);
-}
-
 </style>
-
-

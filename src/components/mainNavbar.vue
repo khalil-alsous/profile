@@ -39,6 +39,7 @@ export default {
   min-height: 100vh;
   .overlay {
     padding-top: 40px;
+    padding-bottom: 20px;
     width: 100%;
     display: flex;
     flex-direction: column;

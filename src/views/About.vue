@@ -122,14 +122,7 @@ export default {
   },
   mounted() {
     let counter = document.querySelectorAll(".counter");
-    let section = document.querySelector(".hero");
-    let started = false;
-    window.onscroll = () => {
-      if (window.scrollY >= section.offsetTop - 10) {
-        if (!started) counter.forEach((el) => startCount(el));
-      }
-      started = true;
-    };
+    counter.forEach((el) => startCount(el));
     function startCount(el) {
       let goal = el.dataset.goal;
       let count = setInterval(() => {

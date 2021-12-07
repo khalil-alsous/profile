@@ -168,7 +168,7 @@ export default {
         img {
           max-width: 100%;
           border-radius: 5px;
-          transition: 0.5s;
+          transition: 0.3s;
           margin-bottom: -4px;
         }
         .details {
@@ -181,7 +181,7 @@ export default {
           border-bottom-right-radius: 5px;
           padding: 15px 20px;
           opacity: 0;
-          transition: 0.5s;
+          transition: 0.3s;
           h3 {
             font-size: 18px;
             color: #fff;

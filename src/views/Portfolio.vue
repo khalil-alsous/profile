@@ -161,9 +161,6 @@ export default {
       gap: 35px;
       .slide {
         position: relative;
-        flex-basis: 40%;
-        justify-content: space-between;
-        // margin: 0 12px;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         border-radius: 5px;
         overflow: hidden;
@@ -218,16 +215,6 @@ export default {
           }
           .details {
             opacity: 1;
-          }
-        }
-        @media (max-width: 767px) {
-          & {
-            flex-basis: 80%;
-          }
-          &:nth-of-type(5),
-          &:nth-of-type(6),
-          &:nth-of-type(7) {
-            display: none;
           }
         }
       }

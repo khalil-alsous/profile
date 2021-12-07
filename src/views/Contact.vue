@@ -11,42 +11,32 @@
       </div>
       <div class="info">
         <div class="box">
-          <!-- <vue-fontawesome
-            icon="map-marker"
-            size="2"
-            class="icon"
-            color="#fff"
-          ></vue-fontawesome> -->
+          <span>
+            <font-awesome-icon class="icon" :icon="['fas', 'map-marker-alt']" />
+          </span>
+
           <h1>address</h1>
           <p>198 West 21th Street, Suite 721 New York NY 10016</p>
         </div>
         <div class="box">
-          <!-- <vue-fontawesome
-            class="icon"
-            icon="phone"
-            size="2"
-            color="#fff"
-          ></vue-fontawesome> -->
+          <span>
+            <font-awesome-icon class="icon" :icon="['fas', 'phone']" />
+          </span>
+
           <h1>contact number</h1>
           <p>+ 1235 2355 98</p>
         </div>
         <div class="box">
-          <!-- <vue-fontawesome
-            icon="telegram"
-            class="icon"
-            size="2"
-            color="#fff"
-          ></vue-fontawesome> -->
+          <span>
+            <font-awesome-icon class="icon" :icon="['fab', 'telegram']" />
+          </span>
           <h1>email address</h1>
           <p>info@yoursite.com</p>
         </div>
         <div class="box">
-          <!-- <vue-fontawesome
-            class="icon"
-            icon="globe"
-            size="2"
-            color="#fff"
-          ></vue-fontawesome> -->
+          <span>
+            <font-awesome-icon class="icon" :icon="['fas', 'globe-asia']" />
+          </span>
           <h1>website</h1>
           <p>yoursite.com</p>
         </div>
@@ -93,18 +83,23 @@ export default {
     .box {
       background-image: linear-gradient(to right, #9af569, #33de78);
       padding: 25px;
+      padding-bottom: 40px;
       border-radius: 5px;
       box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
       transition: 0.5s;
-      .icon {
-        background-color: #69e06a;
-        width: 80px;
-        height: 80px;
+      span {
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 0 auto;
+        width: 80px;
+        height: 80px;
+        background-color: #69e06a;
         border-radius: 50%;
+        .icon {
+          font-size: 2rem;
+          color: #fff;
+        }
       }
       h1 {
         font-size: 25px;
@@ -145,6 +140,7 @@ export default {
     transition: 0.2s;
     outline: 1px solid transparent;
     color: #666;
+    font-size: 16px;
     &::placeholder {
       color: #888;
     }
@@ -154,6 +150,7 @@ export default {
   }
   button {
     width: 200px;
+    cursor: pointer;
     padding: 15px 30px;
     border-radius: 40px;
     border: none;
